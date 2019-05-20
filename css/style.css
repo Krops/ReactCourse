@@ -1,48 +1,76 @@
-body {
-  background-color: powderblue;
-}
-h1 {
-  color: blue;
-}
-p {
-  color: red;
-}
 div {
     display: block;
 }
+a {
+	color: #fff;
+}
+i {
+	padding-right: 3px;
+}
 body {
-		margin: 40px;
+	background-color: #444;
 	}
+.button4 {
+	background-color: #e7e7e7;
+	color: black;
+	padding: 10px;
+	width: 100px;
+	border-radius: 4px;
+} 
+.nav-buttons {
+	padding: 10px;
+	border-bottom: 1px solid grey;
+	border-top: 1px solid grey;
+}
 .box {
     background-color: #444;
     color: #fff;
-    border-radius: 5px;
     padding: 20px;
-    font-size: 150%;
 }
 .menu {
 	grid-area: menu;
+	border-right: 1px solid grey;
+	height:100vh;
+}
+.header {
+	grid-area: header;
+	border-bottom: 1px solid grey;
+
 }
 .logo {
 	grid-area: logo;
+
 }
 .posts {
 	grid-area: posts;
 }
+.inline { 
+display: inline-block; 
+margin-right: 10px;
+}
+.post{
+	padding-bottom: 5px;
+border-bottom: 1px solid grey;
+}
 .grid-container {
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 120px 120px auto;
+    grid-gap: 1px;
+    grid-template-columns: 20% 30% 50%;
     grid-template-rows: all;
     grid-template-areas: "logo header header" "menu posts posts";
-    background-color: #fff;
-    color: #444;
+    background-color: #444;
+    color: #fff;
 }
-@media screen and (max-width: 1024){
+@media screen and (max-width: 600px){
   .grid-container { 
      grid-auto-columns: auto;
+     grid-template-areas: "header header header" "menu menu menu" "posts posts posts";
   }
-  .posts {
-  	overflow-y: visible;
+  .posts-list {
+  	overflow-y: scroll;
+  	max-height: 500px;
+  }
+  .menu {
+  	height: 100%
   }
 }
