@@ -19,10 +19,7 @@
 			<hr>
 			<div>Number of posts: 5</div>
 			<hr>
-			<label class="switch">Dark theme
-  <input type="checkbox">
-  <span class="slider round"></span>
-</label>
+			<button id="theme" style="background-color: pink" type="button" class="fas fa-tshirt"></button>
 		</div>
 		<div class="box posts">
 			<div class="nav-buttons">
@@ -133,12 +130,7 @@ document.getElementById("add").onclick = function() {
 
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-	if (event.target == modal) {
-		modal.style.display = "none";
-	}
-}
-let toggle = document.querySelector('.toggle-theme');
+let toggle = document.querySelector('#theme');
 
 toggle.addEventListener('click', function(e) {
   e.preventDefault();
@@ -148,10 +140,10 @@ toggle.addEventListener('click', function(e) {
     document.body.classList.remove('funky');
     // Reverse logic on the button text, so that users can turn
     // the theme back on:
-    toggle.innerText = '🤡 Turn theme on';
+    toggle.style.background = "pink";
   } else {
     document.body.classList.add('funky');
-    toggle.innerText = 'Turn theme off';
+    toggle.style.background = "grey";
   }
 });
 </script>
