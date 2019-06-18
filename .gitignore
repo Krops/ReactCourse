@@ -14,3 +14,4 @@ todo.md
 cypress/videos/
 cypress/screenshots/
 .vscode
+base.db
