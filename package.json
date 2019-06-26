@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "webpack",
-    "eslint": "eslint --ignore-pattern '__tests__' ./src"
+    "eslint": "eslint --ext .jsx --ext .js src"
   },
   "repository": {
     "type": "git",
