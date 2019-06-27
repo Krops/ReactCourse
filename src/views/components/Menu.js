@@ -22,13 +22,12 @@ let Menu = {
        let view =  /*html*/`
        <h2>Posts:</h2>
        ${ posts.map(post => 
-        /*html*/`<a href="#/${post.id}">${post.theme}</a>`
-        ).join('\n ')
+        /*html*/`<a href="#/post/${post.id}">${post.theme}</a>`
+        ).join('<br>')
         }
        <hr>
-       <div>Number of posts: 5</div>
-       <hr>
-       <button id="theme" style="background-color: pink" type="button" class="fas fa-tshirt"></button>`
+       <div>Number of posts: ${ posts.length }</div>
+       <hr>`
        return view
    }
    , after_render: async () => {

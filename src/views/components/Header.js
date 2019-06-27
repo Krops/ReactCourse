@@ -2,7 +2,7 @@ console.log("hellow")
 let Header = {
     render: async () => {
         let view =  /*html*/`
-        <h1>Kropik Blog</h1>`
+        <div class="box header"><h1><a href="#/">Krop Blog</a></h1></div>`
         return view
     },
     after_render: async () => { }
