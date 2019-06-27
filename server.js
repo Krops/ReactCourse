@@ -16,8 +16,8 @@ app.use('/js', express.static('js'));
 app.get('/', (req, res) => res.sendFile('./index.html', { root: __dirname }));
 app.get('/post.html', (req, res) => res.sendFile('./post.html', { root: __dirname }));
 
-app.listen(3000, () => {
-    console.log('Express server started at port : 3000');
+app.listen(4000, () => {
+    console.log('Express server started at port : 4000');
 });
 
 app.use('/api', controller);

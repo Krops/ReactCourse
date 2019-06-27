@@ -39,7 +39,7 @@ module.exports = {
 		}).get(id);
 	},createTable: function(){
 		let createTable = "CREATE TABLE posts(id INTEGER NOT NULL PRIMARY KEY,theme text NOT NULL, description text NOT NULL);";
-		db.run(createTable);
+		db.prepare(createTable);
 	}
 }
 
