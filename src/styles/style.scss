@@ -42,17 +42,13 @@ body {
 
 .header {
 	grid-area: header;
-	border-bottom: 1px solid grey;
+	border: 1px solid grey;
 
 }
 .menu {
 	grid-area: menu;
 	border-right: 1px solid grey;
 	height:100vh;
-}
-.logo {
-	grid-area: logo;
-
 }
 .disable-scrollbars::-webkit-scrollbar {
     width: 0px;
@@ -64,9 +60,10 @@ body {
   -ms-overflow-style: none;  /* IE 10+ */
 }
 .posts {
+  max-height: 500px;
+   overflow: auto;
 	grid-area: posts;
 	overflow-y: scroll;
-	max-height: 500px;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 }
@@ -78,16 +75,11 @@ body {
 display: inline-block; 
 margin-right: 10px;
 }
-.post{
-	padding-bottom: 5px;
-border-bottom: 1px solid grey;
-}
 .grid-container {
-
-	position: fixed;
+  position: fixed;
     display: grid;
     grid-gap: 1px;
-    grid-template-columns: 20% 70%;
+    grid-template-columns: 300px repeat(auto-fill, minmax(200px, 1fr));
     grid-template-rows: all;
     grid-template-areas: "header header" "menu posts";
     background-color: #444;
@@ -98,45 +90,15 @@ border-bottom: 1px solid grey;
      grid-auto-columns: auto;
      grid-template-areas: "header header" "menu menu" "posts posts";
   }
-  .posts-list {
+  .posts {
   	overflow-y: scroll;
-    max-height: 500px;
-    min-width: 800px;
   }
   .menu {
     height: 100%;
     min-width: 500px;
   }
 }
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  data-backdrop: static;
-  data-keyboard: false;
-  color: grey;
-}
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  padding: 20px;
-  border: 1px solid #888;
-  background-color: white;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* The Close Button */
 .close {
   color: #aaa;
   float: right;

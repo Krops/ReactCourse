@@ -27,7 +27,9 @@ let Menu = {
         }
        <hr>
        <div>Number of posts: ${ posts.length }</div>
-       <hr>`
+       <hr>
+       <a href="#/addpost" id="add_post" class="inline button4"><i
+       class="fas fa-plus-square"></i>Add Post</a>`
        return view
    }
    , after_render: async () => {

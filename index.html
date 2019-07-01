@@ -10,51 +10,18 @@
 		href="https://gist.githubusercontent.com/DavidWells/18e73022e723037a50d6/raw/ead7e72d11c847ad9b81f094686543522101c278/reset.css">
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 </head>
-
 <body>
 	<div class="grid-container">
 		<div id="headerId" class="box header">
+				
 		</div>
 		<div id="menuId" class="box menu">
 				
 		</div>
-		<div class="box posts">
-			<div class="nav-buttons">
-				<a class="inline button4"><i class="fas fa-bars"></i>Posts</a><a id="add_post" class="inline button4"><i
-						class="fas fa-plus-square"></i>Add Post</a>
-						<button id="theme" style="background-color: pink" type="button" class="fas fa-tshirt"></button>
-			</div>
-			<div id="postsId" class="posts-list">
-			</div>
+		<div class="box posts" id="postsId">
 		</div>
 	</div>
-	<!-- The Modal -->
-	<div id="myModal" class="modal">
-
-		<!-- Modal content -->
-		<div class="modal-content">
-			<h2 style="text-transform: uppercase;">Delete this post?</h2>
-			<button id="yes" type="button" class="fas fa-check-circle button4">YES</button>
-			<button id="cancel" type="button" class="fas fa-ban button4">CANCEL</button>
-		</div>
-
-	</div>
-	<div id="myModalForm" class="modal">
-
-		<!-- Modal content -->
-		<div class="modal-content">
-			<h2 style="text-transform: uppercase;">Add new post</h2>
-			<form>
-				<div>
-					<div>Theme:<input type="text" name="theme"><br></div>
-					<div>Description:<input type="text" name="description"></div>
-				</div>
-			</form>
-			<button id="add" type="button" class="fas fa-check-circle button4">ADD</button>
-			<button id="discard" type="button" class="fas fa-ban button4">DISCARD</button>
-		</div>
-
-	</div>
+	<button id="theme" style="background-color: pink" type="button" class="fas fa-tshirt"></button>
 	<script type="module" src="js/index.js"></script>
 </body>
 

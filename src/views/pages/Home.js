@@ -24,7 +24,7 @@ let Home = {
         /*html*/`<h2 class="inline"><a href="#/post/${post.id}">${post.theme}</a></h2>
         <span class="inline">at 11/06/1992</span>
 					<!-- Button trigger modal -->
-					<button id="myBtn" type="button" class="fas fa-trash-alt inline"></button>
+					<a id="myBtn" type="button" class="fas fa-trash-alt inline" href="#/deletepost/${post.id}"></a>
 					<div>
                     ${post.description}
 					</div>`
