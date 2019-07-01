@@ -4,11 +4,17 @@ import Header from './views/components/Header.js';
 import Menu from './views/components/Menu.js';
 import Home from './views/pages/Home.js';
 import Post from './views/pages/Post.js';
+import Delete from './views/pages/Delete.js';
+import AddPost from './views/pages/AddPost.js';
+import Update from './views/pages/Update.js';
 import Utils from './Utils.js'
 
 const routes = {
   '/': Home,
-   '/post/id': Post
+   '/post/id': Post,
+   '/deletepost/id': Delete,
+   '/addpost': AddPost,
+   '/updatepost/id': Update
 };
 
 const router = async () => {
