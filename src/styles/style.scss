@@ -76,10 +76,11 @@ display: inline-block;
 margin-right: 10px;
 }
 .grid-container {
+  width: 100vw;
   position: fixed;
     display: grid;
     grid-gap: 1px;
-    grid-template-columns: 300px repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 300px auto;
     grid-template-rows: all;
     grid-template-areas: "header header" "menu posts";
     background-color: #444;

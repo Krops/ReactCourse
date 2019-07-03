@@ -42,29 +42,6 @@ window.addEventListener('hashchange', router);
 window.addEventListener('load', router);
 
 
-var modal = document.getElementById("myModal");
-var formModal = document.getElementById("myModalForm");
-
-// document.getElementById("myBtn").onclick = function () {
-//   modal.style.display = "list-item";
-// };
-document.getElementById("add_post").onclick = function () {
-  formModal.style.display = "list-item";
-};
-document.getElementById("yes").onclick = function () {
-  modal.style.display = "none";
-};
-document.getElementById("cancel").onclick = function () {
-  modal.style.display = "none";
-  formModal.style.display = "none";
-};
-document.getElementById("discard").onclick = function () {
-  formModal.style.display = "none";
-};
-document.getElementById("add").onclick = function () {
-  formModal.style.display = "none";
-};
-
 let toggle = document.querySelector('#theme');
 
 toggle.addEventListener('click', function (e) {
