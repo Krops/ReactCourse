@@ -24,7 +24,7 @@ router.get('/posts/:postId', (req, res) => {
 
 
 router.post('/addPost', (req, res) => {
-    errors = validateObject(req.body);
+    var errors = validateObject(req.body);
     if(errors.length){
         return res.status(400).send(errors);
     }

@@ -19,7 +19,6 @@ let getPost = async (id) => {
 
 let Post = {
     render : async () => {
-        console.info("hedfsdf");
         let request = Utils.parseRequestURL()
         let post = await getPost(request.id)
         return /*html*/`
