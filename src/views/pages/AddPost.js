@@ -46,6 +46,9 @@ let AddPost = {
             else if (theme.value.length > 1000) {
                 themeWarn.innerText = "Theme should be smaller then 1000!";
                 console.log("2")
+            }else if (5 < theme.value.length < 1000) {
+                themeWarn.innerText = "";
+                console.log("5")
             }
             if (description.value.length < 5) {
                 descWarn.innerText = "Description should be greater then 5!";
@@ -54,10 +57,8 @@ let AddPost = {
             else if (description.value.length > 1000) {
                 descWarn.innerText = "Description should be smaller then 1000!";
                 console.log("4")
-            } else if (5 < theme.value.length < 1000) {
-                themeWarn.innerText = "";
-                console.log("5")
             }
+            
             else if (5 < description.value.length < 1000) {
                 descWarn.innerText = "";
                 console.log("6")
