@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import Utils        from './../../Utils.js'
-var _ = require('lodash');
 let updatePost = async (id, theme, description) => {
   const options = {
     method: 'PUT',
@@ -44,6 +43,9 @@ let Update = {
         `
   }
   , after_render: async () => {
+    document.getElementById("cancel").addEventListener("click", () => {
+      window.history.back();
+  })
     document.getElementById("yes").addEventListener("click", () => {
       let themeWarn = document.getElementById("themewarnId");
       let descWarn = document.getElementById("descwarnId");

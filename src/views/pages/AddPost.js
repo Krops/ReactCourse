@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-var _ = require('lodash');
 let addPost = async (theme, description) => {
   const options = {
     method: 'POST',
@@ -32,6 +31,9 @@ let AddPost = {
         `
   }
   , after_render: async () => {
+    document.getElementById("cancel").addEventListener("click", () => {
+      window.history.back();
+  })
     document.getElementById("yes").addEventListener("click", () => {
       let themeWarn = document.getElementById("themewarnId");
       let descWarn = document.getElementById("descwarnId");
