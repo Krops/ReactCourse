@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/extensions
-import Utils from '../../Utils.js';
+import {serverUrl, Utils} from '../../Utils.js';
 
 const getPost = async (id) => {
   const options = {
@@ -8,7 +8,7 @@ const getPost = async (id) => {
       'Content-Type': 'application/json',
     },
   };
-  return fetch(`http://localhost:4000/api/posts/${id}`, options)
+  return fetch(`${serverUrl}/api/posts/${id}`, options)
     .then(response => response.json())
     .catch(error => error.status);
 };
@@ -27,7 +27,7 @@ const Post = {
     <div>${post.description}</div>
     </div>`;
   },
-  after_render: async () => console.log('No after render'),
+  after_render: async () => {},
 };
 
 export default Post;

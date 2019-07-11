@@ -1,3 +1,4 @@
+import {serverUrl, Utils} from '../../Utils.js';
 
 const addPost = async (theme, description) => {
   const options = {
@@ -10,8 +11,7 @@ const addPost = async (theme, description) => {
       description,
     }),
   };
-  console.log(options);
-  return fetch('http://localhost:4000/api/addPost', options)
+  return fetch(`${serverUrl}/api/addPost`, options)
     .then(response => response.json())
     .catch(error => error.status);
 };
@@ -35,23 +35,17 @@ const AddPost = {
       const description = document.getElementById('descrId');
       if (theme.value.length < 5) {
         themeWarn.innerText = 'Theme should be greater then 5!';
-        console.log('1');
       } else if (theme.value.length > 1000) {
         themeWarn.innerText = 'Theme should be smaller then 1000!';
-        console.log('2');
       } else {
         themeWarn.innerText = '';
-        console.log('5');
       }
       if (description.value.length < 5) {
         descWarn.innerText = 'Description should be greater then 5!';
-        console.log('3');
       } else if (description.value.length > 1000) {
         descWarn.innerText = 'Description should be smaller then 1000!';
-        console.log('4');
       } else {
         descWarn.innerText = '';
-        console.log('6');
       }
 
       addPost(theme.value, description.value).then((response) => {

@@ -1,3 +1,5 @@
+import {serverUrl, Utils} from '../../Utils.js';
+
 const getPostsList = async () => {
   const options = {
     method: 'GET',
@@ -5,7 +7,7 @@ const getPostsList = async () => {
       'Content-Type': 'application/json',
     },
   };
-  return fetch('http://localhost:4000/api/posts', options)
+  return fetch(`${serverUrl}/api/posts`, options)
     .then(response => response.json())
     .catch(error => error.status);
 };
@@ -21,7 +23,7 @@ const Home = {
         <a id="myBtn" type="button" class="fas fa-trash-alt inline" href="#/deletepost/${post.id}"></a>
         <div>${post.description}</div>`).join('\n')}</div>`;
   },
-  after_render: async () => console.log('No after render'),
+  after_render: async () => {},
 };
 
 export default Home;

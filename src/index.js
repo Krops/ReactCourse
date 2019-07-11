@@ -26,8 +26,6 @@ const router = async () => {
   menu.innerHTML = await Menu.render();
 
   const request = Utils.parseRequestURL();
-
-  // Parse the URL and if it has an id part, change it with the string ":id"
   const parsedURL = (request.resource ? `/${request.resource}` : '/') + (request.id ? '/id' : '') + (request.verb ? `/${request.verb}` : '');
   const page = routes[parsedURL];
   content.innerHTML = await page.render();
