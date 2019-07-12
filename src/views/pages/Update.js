@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/extensions
-import {serverUrl, Utils} from '../../Utils.js';
+import { Utils } from '../../Utils.js';
+import { serverUrl } from '../../Configs';
 
 const updatePost = async (id, theme, description) => {
   const options = {

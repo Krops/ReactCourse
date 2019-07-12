@@ -1,4 +1,4 @@
-import {serverUrl, Utils} from '../../Utils.js';
+import { serverUrl } from '../../Configs';
 
 const getPostsList = async () => {
   const options = {

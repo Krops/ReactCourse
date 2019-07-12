@@ -1,5 +1,3 @@
-export const serverUrl = 'http://localhost:4000';
-
 export const Utils = {
   parseRequestURL: () => {
     const url = window.location.hash.slice(1).toLowerCase() || '/';
