@@ -48,9 +48,9 @@ router.get('/createTable', (req, res) => {
 
 function validateObject(object){
     var errors = [];
-    if (typeof(object.theme) == 'undefined'){
+    if (typeof(object.theme) === 'undefined'){
         errors.push("theme should be present");
-    } else if(typeof(object.description) == 'undefined'){
+    } else if(typeof(object.description) === 'undefined'){
         errors.push("description should be present");
     }
     else {
