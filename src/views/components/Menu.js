@@ -1,3 +1,5 @@
+import { serverUrl } from '../../Configs';
+
 const getPostsList = async () => {
   const options = {
     method: 'GET',
@@ -5,7 +7,7 @@ const getPostsList = async () => {
       'Content-Type': 'application/json',
     },
   };
-  return fetch('http://localhost:4000/api/posts', options).then(response => response.json()).catch(error => error.status);
+  return fetch(`${serverUrl}/api/posts`, options).then(response => response.json()).catch(error => error.status);
 };
 
 const Menu = {
