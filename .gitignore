@@ -1,0 +1,17 @@
+.DS_STORE
+node_modules
+dist
+storybook_dist
+coverage
+.module-cache
+*.log*
+_nogit
+yarn-error.log
+package-lock.json
+jest-test-results.json
+todo.md
+.idea
+cypress/videos/
+cypress/screenshots/
+.vscode
+base.db
